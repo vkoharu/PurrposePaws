@@ -1,1 +1,661 @@
+/* =========================================
+   PURRPOSE PAWS
+   Color Palette
+   Brown: #724319
+   Dusty Pink: #D88180
+   Light Pink: #F7B1B0
+   Cream: #FEEAC7
+   Sage: #CAD182
+========================================= */
 
+:root {
+    --brown: #724319;
+    --pink: #D88180;
+    --light-pink: #F7B1B0;
+    --cream: #FEEAC7;
+    --sage: #CAD182;
+    --white: #fffaf2;
+}
+
+
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 6%;
+
+    background: var(--cream);
+    border-bottom: 2px solid var(--brown);
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.paw {
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 8%;
+}
+
+
+/* Decorative bars */
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 95px;
+
+    background: var(--light-pink);
+
+    right: -80px;
+    top: 120px;
+
+    transform: rotate(-8deg);
+    border-radius: 8px;
+
+    opacity: 0.8;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 80px;
+
+    background: var(--sage);
+
+    right: -60px;
+    top: 220px;
+
+    transform: rotate(7deg);
+    border-radius: 8px;
+
+    opacity: 0.9;
+}
+
+
+/* Hero text */
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+
+/* THE BIG HEADLINE */
+
+.hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -5px;
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    display: inline-block;
+
+    background: var(--pink);
+    color: var(--brown);
+
+    padding: 8px 25px;
+
+    transform: rotate(-2deg);
+
+    box-shadow: 12px 12px 0 var(--sage);
+}
+
+
+/* tagline */
+
+.tagline {
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 550px;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+
+    background: var(--brown);
+    color: var(--cream);
+
+    padding: 14px 25px;
+
+    font-weight: 800;
+
+    border: 3px solid var(--brown);
+
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background: var(--pink);
+    color: var(--brown);
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   HERO CAT
+========================================= */
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+
+    width: 280px;
+    height: 280px;
+
+    background: var(--light-pink);
+
+    border: 5px solid var(--brown);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(4deg);
+
+    box-shadow: 18px 18px 0 var(--sage);
+}
+
+.cat-circle {
+    font-size: 6rem;
+}
+
+.paw-large {
+    position: absolute;
+
+    right: -30px;
+    bottom: 15px;
+
+    font-size: 3rem;
+
+    transform: rotate(-15deg);
+}
+
+
+/* =========================================
+   DECORATIVE PAWS
+========================================= */
+
+.decor {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.35;
+}
+
+.decor-one {
+    top: 15%;
+    left: 5%;
+    transform: rotate(-20deg);
+}
+
+.decor-two {
+    bottom: 15%;
+    left: 45%;
+    transform: rotate(15deg);
+}
+
+.decor-three {
+    top: 35%;
+    right: 5%;
+    transform: rotate(25deg);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+}
+
+.section h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -2px;
+}
+
+.section h2 span {
+    background: var(--sage);
+    padding: 3px 12px;
+}
+
+
+/* =========================================
+   MISSION
+========================================= */
+
+.mission {
+    background: var(--white);
+
+    max-width: 100%;
+}
+
+.mission .section-intro {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.mission > p:not(.section-intro) {
+    max-width: 650px;
+}
+
+
+/* =========================================
+   ACTIVITIES
+========================================= */
+
+.activities {
+    background: var(--cream);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 35px;
+
+    min-height: 250px;
+
+    border: 3px solid var(--brown);
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.pink-card {
+    background: var(--light-pink);
+}
+
+.sage-card {
+    background: var(--sage);
+}
+
+.cream-card {
+    background: var(--white);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   PARTNER
+========================================= */
+
+.partner-section {
+    position: relative;
+
+    padding: 100px 8%;
+
+    background: var(--brown);
+    color: var(--cream);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-section h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    margin-bottom: 20px;
+}
+
+.partner-section p {
+    max-width: 650px;
+}
+
+.partner-section .section-label {
+    color: var(--light-pink);
+}
+
+.partner-decoration {
+    font-size: 8rem;
+    opacity: 0.15;
+}
+
+
+/* =========================================
+   TEAM
+========================================= */
+
+.team {
+    background: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.team-member {
+    padding: 30px;
+
+    border: 3px solid var(--brown);
+
+    background: var(--cream);
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--light-pink);
+
+    font-size: 4rem;
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   IMPACT
+========================================= */
+
+.impact {
+    background: var(--sage);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
+
+.stat {
+    background: var(--cream);
+
+    border: 3px solid var(--brown);
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.stat span {
+    font-weight: 800;
+}
+
+
+/* =========================================
+   GET INVOLVED
+========================================= */
+
+.involved {
+    position: relative;
+
+    padding: 120px 8%;
+
+    background: var(--pink);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.involved h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.involved h2 span {
+    background: var(--cream);
+    padding: 3px 15px;
+}
+
+.involved p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.light-button {
+    background: var(--cream);
+    color: var(--brown);
+}
+
+.tail-decoration {
+    position: absolute;
+
+    font-size: 12rem;
+
+    opacity: 0.12;
+
+    left: -20px;
+    bottom: -50px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 45px 8%;
+
+    background: var(--brown);
+
+    color: var(--cream);
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 10px;
+    opacity: 0.6;
+    font-size: 0.85rem;
+}
+
+.small-note {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 70px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-card {
+        width: 220px;
+        height: 220px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partner-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
